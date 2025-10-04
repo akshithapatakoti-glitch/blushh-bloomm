@@ -1,0 +1,372 @@
+/* ✅ RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f0cad8;
+  color: #333;
+  overflow-x: hidden;
+}
+
+
+/* ✅ PREMIUM NAVBAR DESIGN */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 30px;
+  background: linear-gradient(90deg, #f4bcd2, #ff3385);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+}
+.navbar {
+  position: sticky;
+  top: 0;
+}
+
+/* ✅ Logo Styling */
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ✅ Nav Buttons (Cart & Wishlist) */
+.nav-actions {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.icon-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.icon-btn:hover {
+  background: white;
+  color: #ff3385;
+  transform: scale(1.05);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.icon-btn {
+  background: white;
+  color: #ff4d88;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ✅ TOP CONTROLS */
+.top-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  padding: 20px;
+  background: #fff;
+}
+
+#searchInput,
+#sortSelect {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-btn {
+  padding: 8px 14px;
+  border: none;
+  background: #ffb6d5;
+  color: #333;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background: #ff4d88;
+  color: white;
+}
+
+/* ✅ PRODUCT GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: rgb(244, 198, 215);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img.thumb {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card .title {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.card .brand-label {
+  font-size: 14px;
+  color: #555;
+  margin: 4px 0;
+}
+
+.card .price {
+  font-weight: 700;
+  color: #ff4d88;
+  margin-bottom: 8px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn.primary {
+  background: #ff4d88;
+  color: #fff;
+}
+
+.btn.secondary {
+  background: #ddd;
+}
+
+.btn.heart {
+  background: none;
+  font-size: 18px;
+}
+
+.btn.heart.wished {
+  color: red;
+}
+
+/* ✅ SIDEBARS */
+.sidebar {
+  position: fixed;
+  top: 0;
+  width: 350px;
+  height: 100vh;
+  background: #ffe6f2;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-left {
+  left: -400px;
+}
+
+.sidebar-left.show {
+  transform: translateX(400px);
+}
+
+.sidebar-right {
+  right: -400px;
+}
+
+.sidebar-right.show {
+  transform: translateX(-400px);
+}
+
+.sidebar-header {
+  background: #ff4d88;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 12px;
+  gap: 10px;
+}
+
+.cart-item img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.sidebar-footer {
+  padding: 15px;
+  background: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ✅ MODAL */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  width: 400px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.modal-price {
+  color: #ff4d88;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* ✅ HERO BANNER */
+.hero-banner {
+  width: 100%;
+  height: 300px;
+  background-image: url("https://media.istockphoto.com/id/1200068620/photo/banner-made-from-set-of-decorative-cosmetics-for-make-up.jpg?s=612x612&w=0&k=20&c=l9ASqwBvLwfXAMfynB1hbZa4-ajqmZiO3AmlSjCU27o=");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-text {
+  text-align: center;
+  color: rgb(232, 102, 171);
+  padding: 20px 40px;
+  border-radius: 8px;
+}
+
+.banner-text h2 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.banner-text p {
+  font-size: 18px;
+}
+
+/* ✅ Logo + Title Container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ✅ Logo Image Styling */
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}

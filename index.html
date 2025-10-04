@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blush & Bloom</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ 
+
+
+  <!-- ✅ NAVBAR -->
+  <header class="navbar">
+    <div class="logo-container">
+  <img src="https://t3.ftcdn.net/jpg/01/82/42/28/360_F_182422819_wcABZjRXS8xvgnMSUtgvBX00J0TjhyjT.jpg" alt="Logo" class="logo-img">
+  <h1 class="logo">Blush & Bloom</h1>
+</div>
+
+    <div class="nav-actions">
+      <button id="wishBtn" class="icon-btn">
+        ❤️ Wishlist <span id="wishCount">0</span>
+      </button>
+      <button id="cartBtn" class="icon-btn">
+        🛒 Cart<span id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+
+<!-- ✅ Banner (now correctly below the title/header) -->
+<section class="hero-banner">
+  <div class="banner-text">
+    <h2>"Unleash Your Inner glow with Blush & Bloom"</h2>
+    <h5><p>✨✨Beauty curated just for you✨✨</p></h5>
+  </div>
+</section>
+
+
+  <!-- ✅ SEARCH + FILTER SECTION -->
+  <section class="top-controls">
+    <input type="text" id="searchInput" placeholder="Search products...">
+    <select id="sortSelect">
+      <option value="default">Sort By</option>
+      <option value="low">Price: Low to High</option>
+      <option value="high">Price: High to Low</option>
+    </select>
+    <div class="filters">
+      <button class="filter-btn active" data-cat="all">All</button>
+      <button class="filter-btn" data-cat="makeup">Makeup</button>
+      <button class="filter-btn" data-cat="skincare">Skincare</button>
+      <button class="filter-btn" data-cat="haircare">Haircare</button>
+      <button class="filter-btn" data-cat="fragrance">Fragrance</button>
+      <button class="filter-btn" data-cat="tools">Tools</button>
+    </div>
+  </section>
+
+  <!-- ✅ PRODUCT GRID -->
+  <main>
+    <div id="productGrid" class="grid"></div>
+  </main>
+
+  <!-- ✅ CART SIDEBAR (LEFT) -->
+  <aside id="cartSidebar" class="sidebar sidebar-left">
+    <div class="sidebar-header">
+      <h2>Your Cart</h2>
+      <button id="closeCart" class="close-btn">×</button>
+    </div>
+    <div id="cartItems" class="sidebar-content"></div>
+    <div class="sidebar-footer">
+      <strong>Total: $<span id="cartTotal">0.00</span></strong>
+    </div>
+  </aside>
+
+  <!-- ✅ WISHLIST SIDEBAR (RIGHT) -->
+  <aside id="wishSidebar" class="sidebar sidebar-right">
+    <div class="sidebar-header">
+      <h2>Your Wishlist</h2>
+      <button id="closeWish" class="close-btn">×</button>
+    </div>
+    <div id="wishItems" class="sidebar-content"></div>
+  </aside>
+
+  <!-- ✅ PRODUCT MODAL -->
+  <div id="modalBackdrop" class="modal-backdrop">
+    <div class="modal-content">
+      <button id="closeModalBtn" class="modal-close">×</button>
+      <img id="modalMainImg" class="modal-img">
+      <h2 id="modalTitle"></h2>
+      <p id="modalBrand"></p>
+      <p id="modalDesc"></p>
+      <p id="modalPrice" class="modal-price"></p>
+      <div class="modal-actions">
+        <button id="modalAddCart" class="btn primary">Add to Cart</button>
+        <button id="modalWish" class="btn secondary">Add to Wishlist</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
